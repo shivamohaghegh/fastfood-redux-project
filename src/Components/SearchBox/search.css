@@ -1,0 +1,7 @@
+.search-box {
+  width: 550px !important;
+}
+.search-box:focus {
+  border-color: rgb(46, 183, 50) !important;
+  box-shadow: 0 0 0 0.25rem rgba(4, 204, 30, 0.25) !important;
+}

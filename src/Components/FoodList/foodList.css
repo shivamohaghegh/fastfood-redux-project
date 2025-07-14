@@ -1,0 +1,22 @@
+.mycard {
+  height: 360px !important;
+  margin-bottom: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.mycard-img {
+  height: 220px !important;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.mycard-img:hover {
+  opacity: 0.9;
+}
+
+.mycard-text {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

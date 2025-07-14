@@ -1,0 +1,9 @@
+const ProductActionTypes = {
+  SET_PRODUCTS: "SET_PRODUCTS",
+  SET_PRODUCTS_LOADING: "SET_PRODUCTS_LOADING",
+  SET_PRODUCTS_ERROR: "SET_PRODUCTS_ERROR",
+  SET_CATEGORY: "SET_CATEGORY",
+};
+
+export default ProductActionTypes;
+
