@@ -1,0 +1,7 @@
+.limit-btn {
+  cursor: pointer;
+}
+.limit-btn.active {
+  color: #139a24;
+  font-weight: bold;
+}

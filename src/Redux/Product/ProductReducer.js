@@ -1,13 +1,26 @@
 import ProductActionTypes from "./ProductActionTypes";
 
-const { SET_PRODUCTS, SET_PRODUCTS_LOADING, SET_PRODUCTS_ERROR, SET_CATEGORY } =
-  ProductActionTypes;
+const {
+  SET_PRODUCTS,
+  SET_PRODUCTS_LOADING,
+  SET_PRODUCTS_ERROR,
+  SET_CATEGORY,
+  SET_SEARCH_TERM,
+  SET_SORTING,
+  SET_LIMIT,
+  SET_PAGE,
+} = ProductActionTypes;
 
 const initialState = {
   foodItems: [],
   foodLoading: false,
   foodError: null,
-  category: "",
+  category: "All",
+  searchTerm: "",
+  sorting: { sortBy: "id", order: "asc" },
+  limit: 8,
+  page: 1,
+  totalPages: 5,
 };
 
 const ProductReducer = (state = initialState, action) => {
@@ -31,6 +44,26 @@ const ProductReducer = (state = initialState, action) => {
       return {
         ...state,
         category: action.payload,
+      };
+    case SET_SEARCH_TERM:
+      return {
+        ...state,
+        searchTerm: action.payload,
+      };
+    case SET_SORTING:
+      return {
+        ...state,
+        sorting: action.payload,
+      };
+    case SET_LIMIT:
+      return {
+        ...state,
+        limit: action.payload,
+      };
+    case SET_PAGE:
+      return {
+        ...state,
+        page: action.payload,
       };
     default:
       return state;
