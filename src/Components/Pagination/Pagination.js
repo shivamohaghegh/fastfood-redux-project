@@ -12,10 +12,6 @@ const Pagination = () => {
 
   const dispatch = useDispatch();
 
-  console.log(page);
-  
-
-
   return <div>1</div>;
 };
 export default Pagination;
