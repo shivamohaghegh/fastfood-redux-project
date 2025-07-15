@@ -1,0 +1,16 @@
+.page-link {
+  color: #139a24 !important;
+}
+
+.page-link:focus {
+  outline: 2px solid green !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.25) !important;
+}
+
+.page-link.active,
+.active > .page-link {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  outline: #198754 !important;
+  color: rgb(255, 255, 255) !important;
+}

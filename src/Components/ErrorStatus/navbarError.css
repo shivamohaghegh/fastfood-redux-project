@@ -1,0 +1,44 @@
+.navbar-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.navbar-error__content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.navbar-error__icon {
+  width: 20px;
+  height: 20px;
+  color: #721c24;
+}
+
+.navbar-error__message {
+  margin: 0;
+}
+
+.navbar-error__button {
+  background-color: #721c24;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-error__button:hover {
+  background-color: #5a141a;
+}

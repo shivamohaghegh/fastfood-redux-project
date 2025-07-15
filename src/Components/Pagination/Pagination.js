@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFoodItems } from "../../Redux/Product/ProductActions";
 import useTotalPages from "../../Hooks/useTotalPages";
+import "./pagination.css";
 
 const Pagination = () => {
   const {

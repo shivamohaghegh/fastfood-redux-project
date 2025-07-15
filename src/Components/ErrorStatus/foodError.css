@@ -1,0 +1,44 @@
+.food-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.food-error__content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.food-error__icon {
+  width: 20px;
+  height: 20px;
+  color: #856404;
+}
+
+.food-error__message {
+  margin: 0;
+}
+
+.food-error__button {
+  background-color: #856404;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.food-error__button:hover {
+  background-color: #6c5200;
+}

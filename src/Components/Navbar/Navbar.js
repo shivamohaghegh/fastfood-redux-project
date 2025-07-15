@@ -6,13 +6,15 @@ import NavbarItems from "./NavbarItems";
 import SearchBox from "../SearchBox/SearchBox";
 import { useEffect } from "react";
 import { fetchNavbarItems } from "../../Redux/Navbar/NavbarActions";
+import UserButton from "../User/UserButton";
+import ShoppingCartButton from "../ShoppingCart/ShoppingCartButton";
 import "./navbar.css";
 
 const Navbar = () => {
   const { navbarItems, navbarLoading, navbarError } = useSelector(
     (state) => state.navbar
   );
- 
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -41,15 +43,18 @@ const Navbar = () => {
           {navbarLoading ? (
             <NavbarLoading />
           ) : navbarError ? (
-            <NavbarError />
+            <NavbarError
+              message="Oops! Categories couldn’t load."
+              onRetry={() => dispatch(fetchNavbarItems())}
+            />
           ) : (
             <>
               <NavbarItems navbarItems={navbarItems} />
               <SearchBox />
-              {/* <div className="navbar-btn d-flex align-items-center gap-3">
-            <UserButton />
-            <ShoppingCartButton />
-          </div> */}
+              <div className="navbar-btn d-flex align-items-center gap-3">
+                <UserButton />
+                <ShoppingCartButton />
+              </div>
             </>
           )}
         </div>

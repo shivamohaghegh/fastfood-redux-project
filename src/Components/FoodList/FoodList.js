@@ -28,11 +28,14 @@ const FoodList = () => {
       {foodLoading ? (
         <FoodLoading />
       ) : foodError ? (
-        <FoodError />
+        <FoodError
+          message="Could not fetch food list. Please check your connection."
+          onRetry={() => dispatch(fetchFoodItems(/* your params */))}
+        />
       ) : (
         <FoodCard foodItems={foodItems} />
       )}
-      <Pagination /> 
+      <Pagination />
     </div>
   );
 };
