@@ -3,13 +3,11 @@ import { fetchFoodItems } from "../../Redux/Product/ProductActions";
 import "./limit.css";
 
 const Limit = () => {
-  const { category, searchTerm, sorting, limit } = useSelector(
-    (state) => state.product
-  );
+  const { limit } = useSelector((state) => state.product);
   const dispatch = useDispatch();
   const handleLimit = (num) => {
     const newLimit = num;
-    dispatch(fetchFoodItems(category, searchTerm, sorting, newLimit));
+    dispatch(fetchFoodItems({ limit: newLimit }));
   };
 
   const limits = [4, 8, 12, 16, 20];

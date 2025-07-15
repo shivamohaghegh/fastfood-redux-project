@@ -4,14 +4,7 @@ import useTotalPages from "../../Hooks/useTotalPages";
 import "./pagination.css";
 
 const Pagination = () => {
-  const {
-    category = "All",
-    searchTerm,
-    sorting,
-    limit,
-    page,
-  } = useSelector((state) => state.product);
-
+  const { page } = useSelector((state) => state.product);
   const dispatch = useDispatch();
 
   const totalPages = useTotalPages();
@@ -19,18 +12,18 @@ const Pagination = () => {
 
   const handlePage = (e) => {
     const newPage = Number(e.target.value);
-    dispatch(fetchFoodItems(category, searchTerm, sorting, limit, newPage));
+    dispatch(fetchFoodItems({ page: newPage }));
   };
 
   const goPrev = () => {
     if (page > 1) {
-      dispatch(fetchFoodItems(category, searchTerm, sorting, limit, page - 1));
+      dispatch(fetchFoodItems({ page: page - 1 }));
     }
   };
 
   const goNext = () => {
     if (page < totalPages) {
-      dispatch(fetchFoodItems(category, searchTerm, sorting, limit, page + 1));
+      dispatch(fetchFoodItems({ page: page + 1 }));
     }
   };
 

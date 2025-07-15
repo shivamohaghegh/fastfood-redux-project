@@ -30,7 +30,7 @@ const FoodList = () => {
       ) : foodError ? (
         <FoodError
           message="Could not fetch food list. Please check your connection."
-          onRetry={() => dispatch(fetchFoodItems(/* your params */))}
+          onRetry={() => dispatch(fetchFoodItems())}
         />
       ) : (
         <FoodCard foodItems={foodItems} />
