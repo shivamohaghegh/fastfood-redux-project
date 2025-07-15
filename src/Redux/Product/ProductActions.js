@@ -18,7 +18,7 @@ export const fetchFoodItems = (
   category,
   searchTerm,
   sorting,
-  limit,
+  limit = 8,
   page = 1
 ) => {
   return async (dispatch) => {

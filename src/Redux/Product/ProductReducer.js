@@ -20,7 +20,6 @@ const initialState = {
   sorting: { sortBy: "id", order: "asc" },
   limit: 8,
   page: 1,
-  totalPages: 5,
 };
 
 const ProductReducer = (state = initialState, action) => {
