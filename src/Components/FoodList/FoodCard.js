@@ -1,14 +1,22 @@
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../Redux/Cart/CartActions";
+
 const FoodCard = ({ foodItems }) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (food) => {
+    dispatch(addToCart(food));
+  };
 
   return (
     <div className="row">
       {foodItems?.map((food) => (
-        <div className="col-md-3" key={food.id}>
+        <div className="col-12 col-sm-6 col-md-3" key={food.id}>
           <div className="card mycard">
             <img
               src={food.image}
               className="card-img-top mycard-img"
-              alt={food.name}
+              alt={food.name || "food-image"}
             />
             <div className="badge text-bg-success position-absolute bottom-50 end-0 fs-5">
               Price : {food.price}$
@@ -20,7 +28,10 @@ const FoodCard = ({ foodItems }) => {
               <p className="card-text mycard-text">
                 {food.ingredients.join(", ")}
               </p>
-              <button className="btn btn-sm btn-outline-success">
+              <button
+                onClick={() => handleAddToCart(food)}
+                className="btn btn-sm btn-outline-success"
+              >
                 Add To Cart
               </button>
             </div>
@@ -28,7 +39,7 @@ const FoodCard = ({ foodItems }) => {
         </div>
       ))}
     </div>
-  )
+  );
 };
 
 export default FoodCard;

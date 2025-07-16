@@ -1,17 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFoodItems } from "../../Redux/Product/ProductActions";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NavbarItems = ({ navbarItems }) => {
-  const { category = "All", searchTerm, sorting, limit } = useSelector(
-    (state) => state.product
-  );
+  const { category, page } = useSelector((state) => state.product);
   const dispatch = useDispatch();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleCategory = (e) => {
     const selectedCategory = e.currentTarget.dataset.category;
-    dispatch(fetchFoodItems(selectedCategory, searchTerm, sorting, limit));
+    if (location.pathname !== "/product") navigate("/product");
+    dispatch(fetchFoodItems({ category: selectedCategory, page: 1 }));
   };
-
   return (
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">

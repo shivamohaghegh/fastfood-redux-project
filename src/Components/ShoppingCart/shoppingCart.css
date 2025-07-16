@@ -1,0 +1,36 @@
+.rounded-table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.cart-product-img-box {
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+}
+
+.cart-product-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.cart-product-img:hover {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+.cart-product-nam {
+  transition: all 0.3s ease;
+}
+.cart-product-name:hover {
+  transition: all 0.3s ease;
+  color: green;
+}
+
+.table-responsive {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
