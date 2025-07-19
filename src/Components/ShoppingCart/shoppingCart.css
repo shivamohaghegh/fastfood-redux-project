@@ -34,3 +34,30 @@
   overflow: hidden;
 }
 
+.cart-subtotal {
+  background-color: #212529;
+  border-radius: 1.5rem;
+}
+
+.shopping-cart-text {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.cart-item img {
+     max-width: 100px;
+     height: auto;
+ }
+
+ .quantity-input {
+     width: 50px;
+ }
+
+ .cart-summary {
+     background-color: #2c3034 !important;
+     color: white !important;
+     border-radius: 1rem !important;
+ }
